@@ -1,0 +1,35 @@
+{
+  "name": "@justineo/npmmirror-sync",
+  "description": "Triggers sync on npmmirror.com.",
+  "version": "0.1.0",
+  "author": "GU Yiling <justice360@gmail.com>",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "npmmirror-sync": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "watch": "pnpm build -- --watch src",
+    "prepublishOnly": "pnpm build",
+    "postpublish": "./dist/cli.js npmmirror-sync"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1"
+  },
+  "dependencies": {
+    "@types/node": "^20.10.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justineo/npmmirror-sync.git"
+  }
+}
