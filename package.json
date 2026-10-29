@@ -23,7 +23,7 @@
     "postpublish": "./dist/cli.js npmmirror-sync"
   },
   "devDependencies": {
-    "tsup": "^8.0.1"
+    "tsup": "^9.0.0"
   },
   "dependencies": {
     "@types/node": "^20.10.5"
